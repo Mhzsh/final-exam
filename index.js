@@ -1,9 +1,26 @@
 import react from 'react';
 import ReactDOM from 'react-dom/client';
 import useState from '';
+import useEffect from " ";
 
 function CountdownLightSwitch(props) {
     [toggle,setToggle] = useState("")
+    const themeToggle = () => {
+        setToggle(function (state) {
+            if (state.className=="Dark"){
+                return "Light";
+            }
+            else {
+                return "Dark";
+            }
+        })
+    }
+
+     function timer (){
+        useEffect(function (state) {
+            setInterval(,1000)
+        })
+     }
 
     return(
         <>
