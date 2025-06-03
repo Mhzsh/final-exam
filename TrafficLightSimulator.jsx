@@ -1,15 +1,16 @@
 const TrafficLightSimulator = () => {
-
   return (
     <div className="traffic-light-container">
       <div className="traffic-light">
-        <div className={`light red '}`}></div>
+        <div className={'light red'}></div>
         <div className={'light yellow'}></div>
-        <div className={'light green '}></div>
+        <div className={'light green'}></div>
       </div>
     </div>
   );
 };
+
+export default TrafficLightSimulator;
 
 const styles = `
   .traffic-light-container {
@@ -42,6 +43,7 @@ const styles = `
     position: relative;
   }
 
+
   .light.red {
     background-color: #5c0e0e;
   }
@@ -50,6 +52,7 @@ const styles = `
     background-color: #ff0000;
     box-shadow: 0 0 20px #ff0000;
   }
+
 
   .light.yellow {
     background-color: #5c5c0e;
@@ -60,14 +63,17 @@ const styles = `
     box-shadow: 0 0 20px #ffff00;
   }
 
-
   .light.green {
     background-color: #0e5c0e;
   }
 
-  .light.green.active::after {
-    background: radial-gradient(circle at 30% 30%, #5cff5c, transparent 60%);
-    opacity: 0.8;
+  .light.green.active {
+    background-color: #00ff00;
+    box-shadow: 0 0 20px #00ff00;
   }
 `;
 
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
